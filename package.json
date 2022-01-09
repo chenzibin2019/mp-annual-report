@@ -1,0 +1,98 @@
+{
+  "name": "mpannual-antd",
+  "author": "Z. Chen",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.32.3",
+    "@electron/remote": "^2.0.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "antd": "^4.18.2",
+    "axios": "^0.24.0",
+    "babel-loader": "^8.2.3",
+    "buffer": "^6.0.3",
+    "chart.js": "^3.7.0",
+    "electron-webpack": "^2.8.2",
+    "events": "^3.3.0",
+    "faker": "^6.6.6",
+    "file-saver": "^2.0.5",
+    "fs": "^0.0.1-security",
+    "polyfills": "^2.1.1",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^4.0.0",
+    "react-dom": "^17.0.2",
+    "react-public-ip": "^1.0.0",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "stream": "^0.0.2",
+    "timers": "^0.1.1",
+    "web-vitals": "^2.1.0",
+    "webpack": "^4.2.0"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "app": "electron .",
+    "electron:build": "electron-packager ./ MPAnnualReport --platform=win32 --arch=x64 --out=packages/win32 --ar --app-version=1.0.0 --electron-version=6.0.1",
+    "build-app": "yarn compile && electron-builder",
+    "compile": "electron-webpack"
+  },
+  "electronWebpack": {
+    "commonSourceDirectory": "common",
+    "main": {
+      "sourceDirectory": "."
+    },
+    "renderer": {
+      "sourceDirectory": null
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.3",
+    "electron": "^16.0.6",
+    "electron-builder": "^22.14.5",
+    "electron-packager": "^15.4.0",
+    "react-app-rewired": "^2.1.11"
+  },
+  "target": "web",
+  "browser": {
+    "crypto": false,
+    "fs": false,
+    "path": false,
+    "os": false,
+    "net": false,
+    "stream": false,
+    "tls": false
+  },
+  "build": {
+    "appId": "org.xcookie.mpannual",
+    "productName": "MPAnnualReport",
+    "mac": {
+      "target": [
+        "dir"
+      ]
+    }
+  }
+}
