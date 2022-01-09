@@ -1,17 +1,23 @@
 {
   "name": "mpannual-antd",
-  "author": "Z. Chen",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@ant-design/pro-layout": "^6.32.3",
+    "@electron/remote": "^2.0.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
     "antd": "^4.18.2",
+    "axios": "^0.24.0",
+    "babel-loader": "^8.2.3",
     "buffer": "^6.0.3",
     "chart.js": "^3.7.0",
+    "electron": "^16.0.6",
     "events": "^3.3.0",
+    "faker": "^6.6.6",
+    "file-saver": "^2.0.5",
+    "fs": "^0.0.1-security",
     "polyfills": "^2.1.1",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.0.0",
@@ -31,15 +37,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "app": "electron ."
-  },
-  "electronWebpack": {
-    "commonSourceDirectory": "common",
-    "main": {
-      "sourceDirectory": "."
-    },
-    "renderer": {
-      "sourceDirectory": null
-    }
   },
   "eslintConfig": {
     "extends": [
@@ -61,9 +58,6 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.13.3",
-    "electron": "^16.0.6",
-    "electron-builder": "^22.14.5",
-    "electron-packager": "^15.4.0",
     "react-app-rewired": "^2.1.11"
   },
   "target": "web",
@@ -75,14 +69,5 @@
     "net": false,
     "stream": false,
     "tls": false
-  },
-  "build": {
-    "appId": "org.xcookie.mpannual",
-    "productName": "MPAnnualReport",
-    "mac": {
-      "target": [
-        "dir"
-      ]
-    }
   }
 }
