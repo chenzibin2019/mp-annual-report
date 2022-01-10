@@ -6,8 +6,8 @@ const FetchData = (props) => {
     const { access_token, config, dataCallBack, viewReport } = props;
     const display_message = [
         '点击下方按钮从微信服务器下载数据',
-        '正在下载数据，请稍后',
-        '数据下载完毕，正在处理，请稍后',
+        '正在下载数据，请稍后。请不要关闭该窗口！',
+        '数据下载完毕，正在处理，请稍后。请不要关闭该窗口！',
         '数据处理完毕，点击下方按钮查看报告'
     ];
     const button_text = [

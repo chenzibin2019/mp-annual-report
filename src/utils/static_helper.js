@@ -161,7 +161,7 @@ const analytics = (year, data) => {
                     target_user = article.details[article.details.length - 1].target_user;
                     read_count += article.details[article.details.length - 1].int_page_read_user;
                     day_read_count += article.details[article.details.length - 1].int_page_read_user;
-                    const share_count = article.details[article.details.length - 1].share_user_total;
+                    const share_count = article.details[article.details.length - 1].share_user;
                     if (share_count) {
                         total_share_count += share_count;
                         day_share_count += share_count;
