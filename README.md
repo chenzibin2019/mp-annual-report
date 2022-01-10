@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+WeChat Official Account Year-end Digest Program
+============
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![GitHub repo size](https://img.shields.io/github/repo-size/chenzibin2019/mp-annual-report.svg)](https://img.shields.io/github/repo-size/chenzibin2019/mp-annual-report.svg)
 
-## Available Scripts
+MPAnnualReport is a year-end digest tool for WeChat official accounts. It fetches data from WeChat open platform and summarizes the operating statistics of officially-verified accounts. 
 
-In the project directory, you can run:
 
-### `yarn start`
+#### Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Environment setup](#environment-setup)
+    - [NodeJS](#node-js)
+    - [Electron](#electron)
+- [Build and install MPAnnualReport](#build-and-install-mpauunal-report)
+- [Usage](#usage)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `yarn test`
+## Environment setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The following dependencies are needed for MPAnnual-Report.
 
-### `yarn build`
+- nodejs
+- npm
+- react (>= 6.5.2)
+- ant-design
+- ant-design/pro-layout
+- react-chartjs-2
+- electron-js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Node JS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Node JS** can be installed from [their official site](https://nodejs.org/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Dependencies can be installed using `npm install` command running from the root directory of this project. 
 
-### `yarn eject`
+### Electron
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You should automatically install Electron and Electron-packager by using command `npm install`. If not, please install manually by `npm i electron --dev` and `npm i electron-packager --dev`. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Build and install Plankton-neo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+$ npm install 
+$ npm run # start up development server
+$ npm run app  # start up Electron
+$ npm run build  # build the software for packaging
+$ cd build
+$ npm run build-app-{PLATFORM}-{ARCH}  # package the software. valid platform: darwin (mac) win32 linux. valid arch: x64
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Run the application packaged by Electron-packager. On macOS, run .app file, on Windows, run .exe file, on Linux, run the binary file. 
