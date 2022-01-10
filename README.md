@@ -45,7 +45,7 @@ $ npm run # start up development server
 $ npm run app  # start up Electron
 $ npm run build  # build the software for packaging
 $ cd build
-$ npm run build-app-{PLATFORM}-{ARCH}  # package the software. valid platform: darwin (mac) win32 linux. valid arch: x64
+$ npm run build-app-{PLATFORM}-{ARCH}  # package the software. valid platform: darwin (mac) win32 linux. valid arch: x64, arm64
 ```
 
 ## Usage
